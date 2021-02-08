@@ -1,0 +1,119 @@
+@charset 'utf-8';
+:root{
+    --font-size-2: 3.5rem;
+    --font-size-3: 2.5rem;
+    --font-size-4: 2rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 1.2rem;
+}
+html {
+	font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', sans-serif;
+	line-height: 1.2;
+    word-wrap: break-word;
+    font-size: 10px;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
+	box-sizing: border-box;
+}
+ol, ul, li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+    border: 0;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+button {
+	border: 0;
+	background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+}
+a {
+    text-decoration: none;
+    color:#000
+}
+.main-header {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.topad {
+	background-color: rgb(230, 107, 107);
+
+}
+.topbenner {
+	height: 4rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.topbenner {
+	font-size: var(--font-size-6);
+}
+.topbenner span {
+	font-weight: 600;
+}
+.navbar {
+	height: 12rem;
+}
+.navbartop {
+	display: flex;
+	align-items: center;
+}
+.headmenu {
+	margin-left: auto;
+	font-size: var(--font-size-6);
+}
+.headmenu ul {
+	height: 12rem;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+.headmenu ul li {
+	margin: 0 1.5rem;
+}
+.search {
+	display: flex;
+	width: 23rem;
+	height: 3rem;
+	border: 1px solid #ff214f;
+	border-radius: 2rem;
+}
+.btn-search {
+	color: #ff214f;
+	padding-right: 1.3rem;
+}
