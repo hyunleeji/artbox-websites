@@ -121,6 +121,19 @@ a {
 	color: #ff214f;
 	padding-right: 1.3rem;
 }
+.search input {
+    background-color: #FFF;
+    border: none; 
+    caret-color:#969696;
+    box-shadow: none;
+	margin-left: 1rem;
+}
+.search input:focus {
+    outline: none;
+}
+input::placeholder {
+    color: #E5E5E5;
+}
 .basket-num {
 	display: flex;
 	align-items: center;
