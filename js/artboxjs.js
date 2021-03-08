@@ -99,3 +99,4 @@ Array.prototype.forEach.call(pageDots, function (dot, i) {
     slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 1)) + "px, 0px, 0px)";
     });
 });
+
