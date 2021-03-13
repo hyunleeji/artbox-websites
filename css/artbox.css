@@ -155,7 +155,7 @@ input::placeholder {
 .nav__menu {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
-	padding : 1rem 0;
+	padding : 2rem 0;
 	position: relative;
 	display: block;
 }
@@ -170,6 +170,7 @@ input::placeholder {
 .navicon {
 	font-size: var(--font-size-3);
 	position: relative;
+	display: none;
 }
 .nav__list ul li:hover{
 	display: block;
@@ -702,6 +703,10 @@ h3 {
 		padding-left: 15px;
         padding-right: 15px;
 	}
+	.logoimg {
+		text-align: center;
+		margin: 2rem 0;
+	}
 	.topbenner {
 		text-align: center;
 		font-weight: 500;
@@ -719,10 +724,20 @@ h3 {
 		display: none;
 	}
 	.search {
-		margin: 0 auto;
+		margin-left: 70px;
 	}
 	.twobanner {
 		display: block;
+		font-size: 1.5rem;
+	}
+	.colltext {
+		width: 50%;
+		text-align: left;
+	}
+	.colltext p {
+		font-size: 2.5rem;
+	}
+	.colltext p:nth-child(2) {
 		font-size: 1.5rem;
 	}
 	.leftbn p, .rightbn p {
@@ -739,11 +754,22 @@ h3 {
 		font-size: 1.5rem;
 	}
 	.bestitem-img img {
-		width: 80%;
 		height: 80%;
 	}
 	.character-text p {
 		font-size: 3rem;
+	}
+	.hovereffect {
+		width: 90%;
+	}
+	.six {
+		display: table-cell;
+	}
+	.hovereffect p, .hovereffect span {
+		font-size: 0.5rem;
+	}
+	..hovereffect .overlay {
+		padding: 0;
 	}
 	.membership, .artboxsns, .cs-content {
 		display: inline-block;
@@ -766,12 +792,12 @@ h3 {
 		width: 100%;
 		text-align: center;
 	} 
-	.three-col img {
-		width: 100%;
-	}
 	.artboxshop {
 		display: block;
 	}
+	.snstext {
+		display: inline-block;
+	} 
 	.holiday {
 		text-align: left;
 	}
@@ -780,13 +806,83 @@ h3 {
 	}
 	h2 {
 		font-size: 1.2rem;
+		padding-top: 0rem;
 		padding-bottom: 2rem;
 		word-break :keep-all;
 	}
 	h3 {
 	padding-top: 2rem;
 	font-size: 1.2rem;
-	letter-spacing: 0.1rem;
 	word-break :keep-all;
+	}
+}
+@media screen and (max-width: 400px) {
+	*,
+	*::before,
+	*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	}
+	body {
+		height: 100vh;
+		width: 100%;
+	}
+	.navicon {
+		position: absolute;
+		left: 21px;
+		top: 160px;
+		height: 2.4rem;
+		width: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		cursor: pointer;
+	}
+	.navicon .bar {
+		height: 3px;
+		width: 80%;
+		background: #263d3d;
+		mix-blend-mode: difference;
+		transition: 250ms transform;
+	}
+	.menu-sub h2 {
+		display: none;
+	}
+	.nav__menu {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		clip-path: circle(0% at 100% 0);
+		transition: 250ms ease-out;
+		padding: 0;
+	}
+	.nav__list {
+		height: 100vh;
+		top: 0;
+		display: block;
+		line-height: 5rem;
+	}
+	.nav__list li a:hover{
+		color:#000000;
+		font-weight: 700;
+	}
+	.nav__list li {
+		display: block;
+	}
+	.menu-sub {
+		line-height: 1rem;
+	}
+	.show {
+		clip-path: circle(100% at 50% 50%);
+	}
+	.cross #bar1 {
+		transform: rotate(-45deg)translateY(.9rem);
+	}
+	.cross #bar2 {
+		transform: rotate(45deg)translateY(-.9rem);
 	}
 }

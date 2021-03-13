@@ -23,6 +23,21 @@ const elem = document.querySelector(".rotate");
             }
     }
 
+const hamburger = document.querySelector(".navicon");
+
+const nav = document.querySelector(".nav__menu");
+const navlist = document.querySelector(".nav__list");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("cross");
+nav.classList.toggle("show");
+    if(nav.className == 'nav__menu show') {
+        navlist.style.height = `100vh`;
+    } else {
+        navlist.style.height = 0;
+    }
+})
+
 // Copy first and last slide
 let firstChild = slideList.firstElementChild;
 let lastChild = slideList.lastElementChild;
