@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>안녕하세요, 아트박스 입니다.</title>
     <link rel="stylesheet" href="css/artbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css">
 </head>
 <body>
     <div class="topad">
         <div class="topbenner">
-            <p>5만원이상 <span>무료배송</span></p>
-            <p><span>5천원 할일쿠폰</span> - 아트박스 홈페이지를 공유해주세요!</p>
-            <p>신규회원 가입시 적립금 5,000원 바로 사용가능<span>!</span></p>
+            <p class = "rotate">5만원 이상 무료배송</p>
         </div>
     </div>
     <header class="main-header">
@@ -23,14 +26,8 @@
             </div>
             <div class="headmenu">
                 <ul>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="에어팟 케이스">
-                        <button class="btn-search">
-                            <span class="iconify" data-icon="bx:bx-search" data-inline="false"></span>
-                        </button>
-                    </div>
                     <li class="head-loginjoin">
-                        <a href="/login.jsp">로그인/회원가입</a>
+                        <a href="">로그인/회원가입</a>
                     </li>
                     <li class="head-notice">
                         <a href="">안내</a>
@@ -45,7 +42,13 @@
                             <span class="basketnum">1</span>
                         </div>
                     </div>
+                    </div>
                 </ul>
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="에어팟 케이스">
+                    <button class="btn-search">
+                        <span class="iconify" data-icon="bx:bx-search" data-inline="false"></span>
+                    </button>
             </div>
             </div>
         </nav>
@@ -243,39 +246,37 @@
                     <h1>NEW</h1>
                     <p>이번주 새로온 아이템</p>
                 </div>
-                <div class="sflex threeitem">
-                    <span class="iconify" id="btn_prev" data-icon="bx:bx-chevron-left" data-inline="false" style="font-size: 20rem; color: rgb(226, 226, 226)"></span>
+                <div class="threeitem">
                     <div class="three_content">
-                        <img src="/image/poom19213640075765375.jpg" alt="">
-                        <h2>노트 그린 안녕나의하루 좌물쇠노트</h2>
-                        <span>7,000원</span>
+                        <img src="/image/cupcup.jpg" alt="">
+                        <h2>스텐보틀 텀블러 아이보리</h2>
+                        <span>13,800원</span>
                     </div>
                     <div class="three_content">
-                        <img src="/image/poom20715416187910820.jpg" alt="">
-                        <h2>숄더백 화이트비숑 부클</h2>
-                        <span>24,500원</span>
+                        <img src="/image/xltb.jpg" alt="">
+                        <h2>레트로 감성 인테리어 원형 화장지 티슈 케이스 RETRO</h2>
+                        <span>7,500원</span>
                     </div>
                     <div class="three_content">
-                        <img src="/image/poom20721506803265375.jpg" alt="">
-                        <h2>주머니 자수파우치 핑크 고양이 소</h2>
-                        <span>5,800원</span>
+                        <img src="/image/dpdjvkt.jpg" alt="">
+                        <h2>[에어팟케이스/투명] Touchable Concrete No.01</h2>
+                        <span>15,900원</span>
                     </div>
                     <div class="three_content">
-                        <img src="/image/poom19213640075765375.jpg" alt="">
-                        <h2>노트 그린 안녕나의하루 좌물쇠노트</h2>
-                        <span>7,000원</span>
+                        <img src="/image/cltthf.jpg" alt="">
+                        <h2>큐방칫솔캡_핑크블루펭귄</h2>
+                        <span>2,500원</span>
                     </div>
                     <div class="three_content">
-                        <img src="/image/poom20715416187910820.jpg" alt="">
-                        <h2>숄더백 화이트비숑 부클</h2>
-                        <span>24,500원</span>
+                        <img src="/image/poom1987591024865375.jpg" alt="">
+                        <h2>파일 오토 8포켓</h2>
+                        <span>2,500원</span>
                     </div>
                     <div class="three_content">
-                        <img src="/image/poom20721506803265375.jpg" alt="">
-                        <h2>주머니 자수파우치 핑크 고양이 소</h2>
-                        <span>5,800원</span>
+                        <img src="/image/vlfxhd.JPG" alt="">
+                        <h2>오피스 가죽 필통_6color</h2>
+                        <span>13,800원</span>
                     </div>
-                    <span class="iconify" id="btn_next" data-icon="bx:bx-chevron-right" data-inline="false" style="font-size: 20rem; color: rgb(226, 226, 226)"></span>
                 </div>
                 </div>
                 <div class="twobanner sflex">
@@ -296,12 +297,11 @@
                     <p>이번주 베스트 아이템</p>
                     <h1>BEST ITEM</h1>
                 </div>
-                <div class="bestitem-img">
-                <div class="topbest sflex">
+                <div class="bestitem-img sflex">
                     <div class="imagem topbestimg-a">
-                    <img src="/image/2006231441_detail3.jpg" alt="">
-                    <h3>[팝마트코리아 정품 공식판매처] 푸키-슬리핑 베이비 시리즈_랜덤</h3>
-                    <p><strong>20%</strong>13,000원</p>
+                        <img src="/image/2006231441_detail3.jpg" alt="">
+                        <h3>[팝마트코리아 정품 공식판매처] 푸키-슬리핑 베이비 시리즈_랜덤</h3>
+                        <p><strong>20%</strong>13,000원</p>
                     </div>
                     <div class="imagem topbestimg-b">
                         <img src="/image/2006220279_detail1.jpg" alt="">
@@ -318,16 +318,11 @@
                         <h3>그라데이션 스프링 벽걸이달력 만년형</h3>
                         <p><strong>20%</strong>4,800원</p>
                     </div>
-                </div>
-                <!-- <span class="iconify" data-icon="bx:bx-chevron-left" data-inline="false" style="font-size: 10rem;"></span>
-                <span class="iconify" data-icon="bx:bx-chevron-right" data-inline="false" style="font-size: 10rem"></span> -->
-                <div class="imagem bottombest sflex">
-                    <div class="bottombestimg-a">
+                    <div class="imagem bottombestimg-a">
                         <img src="/image/2003310491_detail1.jpg" alt="">
                         <h3>무광 스탠딩블러 핑크퍼플</h3>
                         <p><strong>20%</strong>1,8000원</p>
                     </div>
-                    
                     <div class="imagem bottombestimg-b">
                         <img src="/image/1907031734_detail1.jpg" alt="">
                         <h3>[오아] 안개가습기 1000</h3>
@@ -343,12 +338,52 @@
                         <h3>[드럼즈코리아 정품 소니엔젤]Refine Vegetable(베지터블) 낱개랜덤</h3>
                         <p><strong>20%</strong>3,500원</p>
                     </div>
+                    <div class="imagem topbestimg-a sflex">
+                            <img src="/image/chrry.jpg" alt="">
+                            <h3>니트백 체리 에코 (2color)</h3>
+                            <p><strong>20%</strong>18,000원</p>
                     </div>
-                    <div class="btn-nav">
+                    <div class="imagem topbestimg-b">
+                            <img src="/image/ghkqns.jpg" alt="">
+                            <h3>상큼달콤 중형 오렌지레몬나무 토분</h3>
+                            <p><strong>20%</strong>119,000원</p>
+                    </div>
+                    <div class="imagem topbestimg-c">
+                            <img src="/image/tablecover.jpg" alt="">
+                            <h3>망고 체크 테이블보 식탁보 2size</h3>
+                            <p><strong>20%</strong>27,900원</p>
+                    </div>
+                    <div class="imagem topbestimg-d">
+                            <img src="/image/socks.jpg" alt="">
+                            <h3>플라워 꽃 양말 8color!</h3>
+                            <p><strong>20%</strong>2,300원</p>
+                    </div>
+                    <div class="imagem bottombestimg-a">
+                            <img src="/image/writeon.jpg" alt="">
+                            <h3>메모수첩 체리 DG</h3>
+                            <p><strong>20%</strong>1,500원</p>
+                    </div>
+                        
+                    <div class="imagem bottombestimg-b">
+                            <img src="/image/file.jpg" alt="">
+                            <h3>인덱스 도큐먼트파일 블루버튼 15포켓 </h3>
+                            <p><strong>20%</strong>6,200원</p>
+                    </div>
+                    <div class="imagem bottombestimg-c">
+                            <img src="/image/rabbit.jpg" alt="">
+                            <h3>말랑이 무드등 (토끼)</h3>
+                            <p><strong>20%</strong>19,800원</p>
+                    </div>
+                    <div class="imagem bottombestimg-d">
+                            <img src="/image/tldnjf.jpg" alt="">
+                            <h3>디어커스 시월보름 핸드워시 손세정제 대용량 500ml</h3>
+                            <p><strong>20%</strong>7,900원</p>
+                    </div>
+                    <!-- <div class="btn-nav">
                         <a href="#" class="btn_prev" proc="P">이전</a>
                         <a href="#" class="btn_next" proc="P">다음</a>
-                    </div>
-            </div>
+                    </div> -->
+                </div>
         </div>
         </section>
         <section class="four-collection block">
@@ -637,6 +672,7 @@
         </footer>
     </div>
 </div>
+<script src="js/slide.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script src="link_to_your_bundle.js"></script>
 <script src="js/artboxjs.js"></script>

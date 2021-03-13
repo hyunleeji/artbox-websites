@@ -11,6 +11,18 @@ const startNum = 0; // initial slide index (0 ~ 4)
 
 slideList.style.width = slideWidth * (slideLen + 2) + "px";
 
+const text = ["5만원 이상 무료배송", "5천원 할인 쿠폰 - 아트박스 홈페이지", "신규회원 신규회원 가입시 적립금 5,000원 바로 사용가능"];
+let counter = 0;
+const elem = document.querySelector(".rotate");
+    setInterval(change, 1500);
+    function change() {
+        elem.innerHTML = text[counter];
+            counter++;
+            if(counter >= text.length) {
+                counter = 0;
+            }
+    }
+
 // Copy first and last slide
 let firstChild = slideList.firstElementChild;
 let lastChild = slideList.lastElementChild;

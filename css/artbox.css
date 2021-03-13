@@ -78,16 +78,19 @@ a {
 }
 .topad {
 	background-color: rgb(230, 107, 107);
-
+	height: 4rem;
+	position: relative;
+	display: block;
 }
 .topbenner {
 	height: 4rem;
+	position: absolute;
+	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-}
-.topbenner {
-	font-size: var(--font-size-6);
+	font-size: 1.3rem;
+	font-weight: 500;
 }
 .topbenner span {
 	font-weight: 600;
@@ -142,6 +145,7 @@ input::placeholder {
 	height: 2.5rem;
 	border: 1px solid #d3d3d3;
 	border-radius: 2rem;
+	margin-right: 2rem;
 }
 .line {
 	width: 0.1rem;
@@ -226,6 +230,9 @@ input::placeholder {
 	margin: auto; 
 	overflow-x: hidden;
 }
+.slide_content img {
+	object-position: left bottom;
+}
 .slide_content { 
 	display: table; 
 	float: left; 
@@ -285,6 +292,43 @@ h1 {
 }
 .threeitem span {
 	font-size: var(--font-size-5);
+}
+.three_content {
+	padding: 0 4rem;
+}
+.threeitem, .bestitem-img {
+	position: relative;
+}
+.threeitem button, .bestitem-img button {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	transform: translate(-50%);
+	width: 50px;
+	border-radius: 100%;
+	border: none;
+}
+.threeitem button.slick-prev, .bestitem-img button.slick-prev {
+	left: -30;
+}
+.threeitem button:before {
+	font-family:'xeicon';
+	color:#000;
+	font-size: 30px;
+}
+.bestitem-img button:before {
+	font-family:'xeicon';
+	color:#000;
+	font-size: 40px;
+}
+.threeitem button.slick-prev:before, .bestitem-img button.slick-prev:before {
+	content: "\e93d"; 
+}
+.threeitem button.slick-next, .bestitem-img button.slick-next{
+	right: 0;
+}
+.threeitem button.slick-next:before, .bestitem-img button.slick-next:before {
+	content: "\e940"; 
 }
 .opnone {
 	display: none;
@@ -348,7 +392,6 @@ h2 {
 	font-size: var(--font-size-5);
 }
 h3 {
-	width: 200px;
 	padding-top: 2rem;
 	font-size: var(--font-size-4);
 }
@@ -366,9 +409,10 @@ h3 {
 }
 .imagem {
 	margin-right: 2rem;
+	display: flex;
 }
-.bestitem-img {
-	position: relative;
+.imagem h3, .imagem p {
+	height: 50px;
 }
 .mainslide {
 	width: 90% !important;
@@ -382,7 +426,7 @@ h3 {
     height: auto;
     z-index: 10;
 }
-.btn-nav a {
+.btn-nav a, .slick-prev, .slick-next {
 	display: inline-block;
     width: 42px;
     height: 42px;
@@ -396,13 +440,19 @@ h3 {
     margin-left: -62px;
     background-position: 0% 0%;
 }
-.btn-nav .btn_next {    
+.btn-nav .btn_next, .slick-next {    
 	float: right;
     margin-right: -62px;
     background-position: 100% 0%;
 }
 .collectsmall {
 	width: 30%;
+	height: 30%;
+	overflow:hidden;
+}
+.collectsmall img:hover {
+	object-fit:cover; 
+	transform:scale(1.1);
 }
 .collectimg {
 	position: relative;
@@ -646,4 +696,97 @@ h3 {
 .iconify :hover {
 	opacity: 50%;
 	transition: all 0.3s;
+}
+@media screen and (max-width: 980px) {
+	.body {
+		padding-left: 15px;
+        padding-right: 15px;
+	}
+	.topbenner {
+		text-align: center;
+		font-weight: 500;
+		word-break: keep-all;
+	}
+	.topbenner p {
+		float: left;
+		width: 100%;
+	}
+	.navbartop {
+		display: block;
+		height: 13rem;
+	}
+	.headmenu ul {
+		display: none;
+	}
+	.search {
+		margin: 0 auto;
+	}
+	.twobanner {
+		display: block;
+		font-size: 1.5rem;
+	}
+	.leftbn p, .rightbn p {
+		top:60%;
+		left:25%;
+	}
+	.rightbn p {
+		left:30%;
+	}
+	.three_content {
+		padding: 0 0.5rem;
+	}
+	.threeitem span {
+		font-size: 1.5rem;
+	}
+	.bestitem-img img {
+		width: 80%;
+		height: 80%;
+	}
+	.character-text p {
+		font-size: 3rem;
+	}
+	.membership, .artboxsns, .cs-content {
+		display: inline-block;
+	}
+	.company-content {
+		display: block;
+		text-align: center;
+		font-size: 0.5rem;
+		line-height: 3rem;
+		color: #333;
+		font-weight: 500;
+	}
+	.company-content li {
+		background-color: #eee;
+	}
+	.question button{
+		margin: 0.2rem 0;
+	}
+	.cs-content {
+		width: 100%;
+		text-align: center;
+	} 
+	.three-col img {
+		width: 100%;
+	}
+	.artboxshop {
+		display: block;
+	}
+	.holiday {
+		text-align: left;
+	}
+	.adress {
+		width: 100%;
+	}
+	h2 {
+		font-size: 1.2rem;
+		padding-bottom: 2rem;
+		word-break :keep-all;
+	}
+	h3 {
+	padding-top: 2rem;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	word-break :keep-all;
+	}
 }
