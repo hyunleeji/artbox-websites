@@ -876,7 +876,7 @@ h3 {
 	.nav__list {
 		height: 100vh;
 		top: 0;
-		display: block;
+		display: none;
 		line-height: 5rem;
 	}
 	.nav__list li a:hover{

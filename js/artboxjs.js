@@ -33,6 +33,7 @@ hamburger.classList.toggle("cross");
 nav.classList.toggle("show");
     if(nav.className == 'nav__menu show') {
         navlist.style.height = `100vh`;
+        navlist.style.display = `block`;
     } else {
         navlist.style.height = 0;
     }
