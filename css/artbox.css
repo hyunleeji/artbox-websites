@@ -3,6 +3,9 @@
     --m-1: 7rem 0;
     --m-2: 3rem 0;
     --m-3: 1rem 0;
+	--wbl---m-1: 7rem 0;
+    --wbl---m-2: 3rem 0;
+    --wbl---m-3: 1rem 0;
 }
 :root{
     --font-size-2: 3.5rem;
@@ -10,71 +13,12 @@
     --font-size-4: 1.8rem;
     --font-size-5: 1.5rem;
     --font-size-6: 1.2rem;
-}
-html {
-	font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', sans-serif;
-	line-height: 1.2;
-    word-wrap: break-word;
-    font-size: 10px;
-}
-body {
-	-webkit-font-smoothing: antialiased;
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
-	box-sizing: border-box;
-}
-ol, ul, li {
-	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-img {
-	max-width: 100%;
-	height: auto;
-    border: 0;
-    cursor: pointer;
-    transition: 500ms ease;
-}
-button {
-	border: 0;
-	background: transparent;
-    cursor: pointer;
-    margin-left: auto;
-}
-a {
-    text-decoration: none;
-    color:#000
-}
-.block > div {
-	max-width: 1300px;
-	margin: 0 auto; 
-	padding: 5rem 0;
-}
-.navbar {
-	max-width: 1300px;
-	margin: 0 auto;
+
+    --wbl---font-size-2: 3.5rem;
+    --wbl---font-size-3: 2.5rem;
+    --wbl---font-size-4: 1.8rem;
+    --wbl---font-size-5: 1.5rem;
+    --wbl---font-size-6: 1.2rem;
 }
 .topad {
 	background-color: rgb(230, 107, 107);
@@ -92,13 +36,12 @@ a {
 	font-size: 1.3rem;
 	font-weight: 500;
 }
-.topbenner span {
-	font-weight: 600;
-}
 .navbartop {
 	height: 15rem;
 	display: flex;
 	align-items: center;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 .headmenu {
 	margin-left: auto;
@@ -230,7 +173,7 @@ input::placeholder {
 .slide_box {
 	width: 100%; 
 	margin: auto; 
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .slide_content img {
 	object-position: left bottom;
@@ -304,9 +247,10 @@ h1 {
 .threeitem button, .bestitem-img button {
 	position: absolute;
 	z-index: 10;
-	top: 50%;
+	top: 45%;
 	transform: translate(-50%);
 	width: 50px;
+	height: 50px;
 	border-radius: 100%;
 	border: none;
 }
@@ -411,7 +355,6 @@ h3 {
 }
 .imagem {
 	margin-right: 2rem;
-	display: flex;
 }
 .imagem h3, .imagem p {
 	height: 50px;
@@ -428,7 +371,7 @@ h3 {
     height: auto;
     z-index: 10;
 }
-.btn-nav a, .slick-prev, .slick-next {
+.btn-nav a {
 	display: inline-block;
     width: 42px;
     height: 42px;
@@ -437,6 +380,15 @@ h3 {
     background-size: auto 100%;
 	margin: 0 auto;
 }
+/* .btn-nav a, .slick-prev, .slick-next {
+	display: inline-block;
+    width: 42px;
+    height: 42px;
+    font-size: 0px;
+    background: url(../image/btn_main_bnr2.png);
+    background-size: auto 100%;
+	margin: 0 auto;
+} */
 .btn-nav .btn_prev {
 	float: left;
     margin-left: -62px;
@@ -455,13 +407,13 @@ h3 {
 	object-fit:cover; 
 	transform:scale(1.1);
 }
-.collectimg {
+.collect {
 	position: relative;
 }
 .colltext {
 	display: flex;
 }
-.collectimg p {
+.collectimg h1 {
 	position: absolute;
 	top:30%;
 	left:20%;
@@ -469,10 +421,10 @@ h3 {
 	text-align: left;
 	font-size: 6rem;
 }
-.colltext :nth-child(2) {
+.colltext p {
 	position: absolute;
 	top:45%;
-	left:18%;
+	left:7%;
 	text-align: left;
 	font-size: 2rem;
 	color:#a0a0a0;
@@ -514,7 +466,7 @@ h3 {
 .shop-text strong, .shop-textin strong {
 	font-size: var(--font-size-3);
 }
-.shop-textin span {
+.shop-textin p {
 	margin-top: 2rem;
 	text-align: center;
 	font-size: var(--font-size-5);
@@ -539,7 +491,7 @@ h3 {
 	text-align: center;
 	flex-direction: column;
 }
-.character-text p {
+.character-text h1 {
 	font-size: 6rem;
 	font-weight: 500;
 	line-height: 3.5rem;
@@ -549,6 +501,7 @@ h3 {
 }
 .character-text img {
 	width: 23%;
+	height: 100%;
 }
 .line2 {
 	width: 0.2rem;
@@ -606,7 +559,7 @@ h3 {
     display: block;
     position: relative;
     max-width: none;
-    width: calc(100% + 22px);
+    width: calc(100% + 23px);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(-10px, 0, 0);
@@ -659,7 +612,7 @@ h3 {
 	font-size: var(--font-size-5);
 }
 .company-content {
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 5rem 0;
 	font-size: var(--font-size-6);
 }
@@ -669,6 +622,11 @@ h3 {
 }
 .customer strong, .holiday .pick  {
 	color:#ff214f
+}
+.holiday .pick {
+font-weight: 800;
+font-size: 1.5rem;
+display: block;
 }
 .cs-text {
 	margin-top: 3rem;
@@ -704,6 +662,9 @@ h3 {
 		padding-left: 15px;
         padding-right: 15px;
 	}
+	.block {
+		margin: 0 1rem;
+	}
 	.logoimg {
 		text-align: center;
 		margin: 2rem 0;
@@ -735,10 +696,10 @@ h3 {
 		width: 50%;
 		text-align: left;
 	}
-	.colltext p {
+	.colltext h1 {
 		font-size: 2.2rem;
 	}
-	.colltext p:nth-child(2) {
+	.colltext p {
 		font-size: 1.2rem;
 	}
 	.leftbn p, .rightbn p {
@@ -814,9 +775,12 @@ h3 {
 	} 
 	.holiday {
 		text-align: left;
+		width: 35%;
+		margin-right: 6rem;
 	}
 	.adress {
 		width: 100%;
+		margin-left: 0;
 	}
 	h2 {
 		font-size: 1.2rem;
@@ -911,16 +875,18 @@ h3 {
 		width: 90%;
 		margin-right: 1.5rem;
 	}
-	.colltext p {
-		font-size: 2rem;
+	.colltext h1 {
+		font-size: 2.5rem;
+		left: 25%;
 	}
-	.colltext p:nth-child(2) {
+	.colltext p {
 		font-size: 0.5rem;
-		left:24%;
 		margin: 1rem 0;
+		top: 35%;
 	}
 	.collectimg span {
 		font-size: 3rem;
+		top: 41%;
 	}
 	.shop-textin {
 		display: contents;
