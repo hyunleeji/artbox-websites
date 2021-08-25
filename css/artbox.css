@@ -163,6 +163,7 @@ input::placeholder {
 }
 .menu-category {
 	padding-bottom: 1rem;
+	padding-top: 3rem;
 }
 .sliderWarp {
 	position: relative; 
