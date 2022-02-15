@@ -128,3 +128,18 @@ Array.prototype.forEach.call(pageDots, function (dot, i) {
     slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 1)) + "px, 0px, 0px)";
     });
 });
+
+const userlogin = document.getElementById("user"); 
+const nousercheck = document.querySelector('#nouser'); 
+const usergo = document.querySelector('.usergo'); 
+const nousergo = document.querySelector('.nousergo'); 
+
+userlogin.addEventListener("click", () => {
+    userlogin.classList.add("cross");
+    usergo.classList.add("show");
+        if(usergo.className == 'usergo show') {
+            usergo.style.display = `block`;
+        } else {
+            usergo.style.display = `none`;
+        }
+    })

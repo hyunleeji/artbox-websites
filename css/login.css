@@ -1,0 +1,99 @@
+#login {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 100px 0;
+}
+#login > .loginform {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.logintop {
+    margin: 4rem 0;
+}
+.logintop > p {
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+}
+.loginform > .loginteb {
+    display: flex;
+}
+.loginteb > .tebs {
+    width: 50%;
+    height: 40px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginteb > .tebs > span {
+    font-size: 1.5rem;
+}
+.loginform > .usergo {
+    position: absolute;
+    width: 100%;
+    display: none
+}
+.loginform > .usergo > form > .fieldset {
+    margin-top: 20px;
+}
+.fieldset > div >  span > input {
+    width: 96%;
+    height: 40px;
+    padding-left: 20px;
+    border: 1.5px solid #d9d9d9;
+}
+.fieldset > div:nth-child(2) >  span > input {
+    margin-top: 10px;
+}
+.fieldset > .idpwfind {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.fieldset > .idpwfind > div > a:nth-child(2)::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin-right: 9px;
+    background: #efefef;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+form > .button-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+form > .button-area > button {
+    margin: 0 auto;
+    border: 1px solid #eee;
+    width: 100%;
+    height: 60px;
+    font-weight: 600;
+}
+form > .button-area > button:nth-child(1) {
+    background-color: #e66b6b;
+}
+form > .button-area > button:nth-child(1):hover {
+    background-color: #ec5a5a;
+}
+form > .button-area > button:nth-child(2){
+    margin-top: 10px;
+}
+form > .button-area > button:nth-child(2):hover {
+    border: 1px solid #4d4d4d;
+}
+form > .button-area > button > span {
+    font-size: 1.5rem;
+}
+.nousergo {
+    position: absolute;
+    width: 100%;
+}
+.loginform > .nousergo > form > .fieldset {
+    margin-top: 20px;
+}

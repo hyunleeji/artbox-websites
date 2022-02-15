@@ -54,6 +54,22 @@ a {
     text-decoration: none;
     color:#000
 }
+input {
+	outline: none;
+}
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=number] {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background: none;
+    font-family: 'SourceHanSansKR',sans-serif;
+}
+input::placeholder {
+	color: #b8b8b8;
+  }
 .block > div {
 	max-width: 1300px;
 	margin: 0 auto; 
